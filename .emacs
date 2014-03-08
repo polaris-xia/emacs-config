@@ -36,6 +36,9 @@
 
 (require 'multi-term)
 
+(require 'projectile)
+(projectile-global-mode)
+
 ;; Always use space instead of tab.
 (defun space-hook ()
   (setq c-basic-offset 4)
@@ -44,8 +47,13 @@
 (add-hook 'c-mode-common-hook 'space-hook t)
 
 (require 'package)
-;;(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(setq package-user-dir (concat script-dir ".emacs.d/elpa"))
+
+(setq package-archives '())
+(add-to-list 'package-archives '("gnu" . "http://127.0.0.1:17204/packages/")) ;;elpa.gnu.org
+(add-to-list 'package-archives '("marmalade" . "http://127.0.0.1:17203/packages/")) ;;marmalade-repo.org
+;; (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
+
 
 (setq term-unbind-key-list '("C-x" "C-c" "C-h" "C-y" "M-w"))
 (setq term-bind-key-alist '(("C-c C-c" . term-interrupt-subjob)
