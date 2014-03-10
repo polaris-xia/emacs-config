@@ -50,9 +50,9 @@
 (setq package-user-dir (concat script-dir ".emacs.d/elpa"))
 
 (setq package-archives '())
-(add-to-list 'package-archives '("gnu" . "http://127.0.0.1:17204/packages/")) ;;elpa.gnu.org
-(add-to-list 'package-archives '("marmalade" . "http://127.0.0.1:17203/packages/")) ;;marmalade-repo.org
-;; (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
+;;(add-to-list 'package-archives '("gnu" . "http://127.0.0.1:17204/packages/")) ;;elpa.gnu.org
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")) ;;marmalade-repo.org ;;17203
+(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
 
 
 (setq term-unbind-key-list '("C-x" "C-c" "C-h" "C-y" "M-w"))
@@ -92,7 +92,7 @@
 ;;   (setq ansi-term-color-vector [unspecified "#000000" "#ba4949" "#3dc53d" "#eaea5c" "#5e9edc" "#eca6eb" "#e69c5e" "#f5f3e8"])
 ;;   (setq ansi-color-names-vector [unspecified "#000000" "#ba4949" "#3dc53d" "#eaea5c" "#5e9edc" "#eca6eb" "#e69c5e" "#f5f3e8"])
 ;; )
-
+(require 'gist)
 (add-hook 'term-mode-hook 'term-escape-hook t)
 ;; (add-hook 'term-mode-hook 'term-color-hook t)
 
