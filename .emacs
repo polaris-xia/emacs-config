@@ -36,6 +36,9 @@
 
 (require 'multi-term)
 
+
+(require 'go-mode)
+
 (require 'projectile)
 (projectile-global-mode)
 
@@ -45,6 +48,8 @@
   (c-set-offset 'substatement-open 0)
   (setq-default tab-width 4))
 (add-hook 'c-mode-common-hook 'space-hook t)
+
+(setq-default tab-width 4)
 
 (require 'package)
 (setq package-user-dir (concat script-dir ".emacs.d/elpa"))
