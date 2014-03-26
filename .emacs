@@ -41,6 +41,7 @@
 
 (require 'projectile)
 (projectile-global-mode)
+(setq projectile-enable-caching t)
 
 ;; Always use space instead of tab.
 (defun space-hook ()

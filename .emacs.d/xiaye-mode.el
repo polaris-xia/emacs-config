@@ -41,7 +41,7 @@
     ("\M-o" . forward-word)
     ("\M-h" . move-beginning-of-line)
     ("\M-'" . move-end-of-line)
-    ("\M-/" . er/expand-region)
+    ("\M-8" . er/expand-region)
     ("\M- " . set-mark-command)
 
     ;; ("\M-d" . backward-delete-char-untabify)
